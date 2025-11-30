@@ -15,6 +15,12 @@ pipeline {
                 sh 'mvn clean compile'
             }
         }
+        stage('Run Tests') {
+            steps {
+                // Run only your 3 test classes
+                sh 'mvn test -Dtest=EnrollementManagementTests,DepartementsManagementTests,StudentManagementApplicationTests'
+            }
+        }
        
     }
 }
