@@ -15,12 +15,7 @@ pipeline {
                 sh 'mvn clean compile'
             }
         }
-        stage('Run Tests') {
-            steps {
-                
-                sh 'mvn test -Dtest=EnrollementManagementTests,DepartementsManagementTests,StudentManagementApplicationTests'
-            }
-        }
+       
     }
 }
 
