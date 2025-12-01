@@ -24,7 +24,7 @@ pipeline {
        
     } post {
         always {
-            archiveArtifacts artifacts: 'github-log.txt'
+            
             mail to: 'rbenomrane15@gmail.com',
                  subject: "Pipeline finished: ${currentBuild.currentResult}",
                  body: "Job finished with result: ${currentBuild.currentResult}"
