@@ -33,13 +33,13 @@ pipeline {
                 withSonarQubeEnv('sonar') {
                     sh """
                         mvn sonar:sonar \
-                          -Dsonar.projectKey=MyProjectKey \
-                          -Dsonar.projectName='MyProjectName' \
+                          -Dsonar.projectKey=rayen \
+                          -Dsonar.projectName='TestDevops-main' \
                           -Dsonar.java.binaries=target/classes \
                           -Dsonar.sources=src/main/java \
                           -Dsonar.tests=src/test/java \
                           -Dsonar.coverage.jacoco.xmlReportPaths=target/site/jacoco/jacoco.xml \
-                          -Dsonar.test.inclusions='**/*UnitTest.java'
+                          -Dsonar.test.inclusions='**/EnrollmentManagementTests.java,**/DepartementsManagementTests.java,**/StudentManagementApplicationTests.java'
                     """
                 }
             }
