@@ -44,6 +44,12 @@ pipeline {
                 }
             }
         }
+        stage('Get Spring Boot Logs') {
+    steps {
+        sh 'kubectl logs springboot-fc7f55c9c-c7pk8'
+    }
+}
+
     }
 
     post {
